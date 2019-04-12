@@ -1,0 +1,60 @@
+Press RETURN to get started!
+
+
+
+Router>enable 
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.124.129 255.255.255.128
+Router(config-if)# no shutdown
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#no ip address 
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/1.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.124.1 255.255.255.192
+Router(config-subif)#exit
+Router(config)#interface gigabitEthernet 0/1.20
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.124.65 255.255.255.192
+Router(config-subif)#exit
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/1.10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1.10, changed state to up
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/1.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1.20, changed state to up
+
+Router(config-if)#exit
+Router(config)#
+
+Router(config-if)#exit
+Router(config)#ip dhcp excluded-address 192.168.124.1 192.168.124.10
+Router(config)#ip dhcp excluded-address 192.168.124.60 192.168.124.62
+Router(config)#ip dhcp excluded-address 192.168.124.65 192.168.124.74
+Router(config)#ip dhcp excluded-address 192.168.124.124 192.168.124.126
+Router(config)#ip dhcp pool pool1
+Router(dhcp-config)#network 192.168.124.0 255.255.255.192
+Router(dhcp-config)#default-router 192.168.124.1
+Router(dhcp-config)#exit
+Router(config)#ip dhcp pool pool2
+Router(dhcp-config)#network 192.168.124.64 255.255.255.192
+Router(dhcp-config)#default-router 192.168.124.65
+Router(dhcp-config)#exit
+Router(config)#
+
+
+
