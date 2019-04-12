@@ -1,0 +1,288 @@
+
+Számítógépek IP címek beállítása:
+
+gép Desktop fül -> IP configuration ->
+
+RENDSZERGAZDA gép:
+
+IP-Address          192.168.10.67
+Subnet Mask         255.255.255.224
+Default Gateway     192.168.10.65
+__________________________________________________________________________________
+
+RENDSZERGAZDA gép Desktop fül -> Command prompt
+
+Jelszavak megadása után -> enable szinten -> show ip interface brief
+__________________________________________________________________________________
+
+Packet Tracer PC Command Line 1.0
+C:\>telnet 192.168.10.62
+Trying 192.168.10.62 ...Open
+
+
+User Access Verification
+
+Password: 
+Switch>enable
+Password: 
+Switch#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual down                  down 
+FastEthernet0/3        unassigned      YES manual down                  down 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual down                  down 
+Vlan1                  192.168.10.62   YES manual up                    up
+Switch#
+
+[Connection to 192.168.10.62 closed by foreign host]
+C:\>telnet 192.168.10.110
+Trying 192.168.10.110 ...Open
+
+
+User Access Verification
+
+Password: 
+Switch>enable
+Password: 
+Switch#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual down                  down 
+FastEthernet0/3        unassigned      YES manual down                  down 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual down                  down 
+Vlan1                  192.168.10.110  YES manual up                    up
+Switch#exit
+
+[Connection to 192.168.10.110 closed by foreign host]
+C:\>telnet 192.168.10.126
+Trying 192.168.10.126 ...Open
+
+
+User Access Verification
+
+Password: 
+Switch>enable
+Password: 
+Switch#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual down                  down 
+FastEthernet0/3        unassigned      YES manual down                  down 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual down                  down 
+Vlan1                  192.168.10.126  YES manual up                    up
+Switch#exit
+
+[Connection to 192.168.10.126 closed by foreign host]
+C:\>telnet 192.168.10.94
+Trying 192.168.10.94 ...Open
+
+
+User Access Verification
+
+Password: 
+Switch>enable
+Password: 
+Password: 
+Switch#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual up                    up 
+FastEthernet0/3        unassigned      YES manual down                  down 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual down                  down 
+Vlan1                  192.168.10.94   YES manual up                    up
+Switch#exit
+
+[Connection to 192.168.10.94 closed by foreign host]
+C:\>telnet 192.168.10.65
+Trying 192.168.10.65 ...Open
+
+[Connection to 192.168.10.65 closed by foreign host]
+C:\>telnet 192.168.10.1
+Trying 192.168.10.1 ...Open
+
+[Connection to 192.168.10.1 closed by foreign host]
+C:\>telnet 192.168.10.97
+Trying 192.168.10.97 ...Open
+
+[Connection to 192.168.10.97 closed by foreign host]
+C:\>telnet 192.168.10.113
+Trying 192.168.10.113 ...Open
+
+[Connection to 192.168.10.113 closed by foreign host]
+C:\>
+______________________________________________________
+
+
+C:\>telnet 192.168.10.65
+Trying 192.168.10.65 ...Open
+
+
+User Access Verification
+
+Password: 
+Router>enable
+Password: 
+Router#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  administratively down down 
+GigabitEthernet0/1     192.168.10.65   YES manual up                    up 
+Serial0/0/0            192.168.10.225  YES manual up                    up 
+Serial0/0/1            unassigned      YES unset  administratively down down 
+Serial0/1/0            192.168.10.233  YES manual up                    up 
+Serial0/1/1            192.168.10.229  YES manual up                    up 
+Vlan1                  unassigned      YES unset  administratively down down
+Router#exit
+
+[Connection to 192.168.10.65 closed by foreign host]
+C:\>telnet 192.168.10.1
+Trying 192.168.10.1 ...Open
+
+
+User Access Verification
+
+Password: 
+Router>enable
+Password: 
+Router#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  administratively down down 
+GigabitEthernet0/1     192.168.10.1    YES manual up                    up 
+Serial0/0/0            192.168.10.226  YES manual up                    up 
+Serial0/0/1            unassigned      YES unset  administratively down down 
+Serial0/1/0            unassigned      YES unset  administratively down down 
+Serial0/1/1            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+Router#exit
+
+[Connection to 192.168.10.1 closed by foreign host]
+C:\>telnet 192.168.10.97
+Trying 192.168.10.97 ...Open
+
+
+User Access Verification
+
+Password: 
+Router>enable
+Password: 
+Router#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  administratively down down 
+GigabitEthernet0/1     192.168.10.97   YES manual up                    up 
+Serial0/0/0            unassigned      YES unset  administratively down down 
+Serial0/0/1            unassigned      YES unset  administratively down down 
+Serial0/1/0            unassigned      YES unset  administratively down down 
+Serial0/1/1            192.168.10.230  YES manual up                    up 
+Vlan1                  unassigned      YES unset  administratively down down
+Router#exit
+
+[Connection to 192.168.10.97 closed by foreign host]
+C:\>telnet 192.168.10.113
+Trying 192.168.10.113 ...Open
+
+
+User Access Verification
+
+Password: 
+Router>enable
+Password: 
+Router#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  administratively down down 
+GigabitEthernet0/1     192.168.10.113  YES manual up                    up 
+Serial0/0/0            unassigned      YES unset  administratively down down 
+Serial0/0/1            unassigned      YES unset  administratively down down 
+Serial0/1/0            192.168.10.234  YES manual up                    up 
+Serial0/1/1            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+Router#exit
+
+[Connection to 192.168.10.113 closed by foreign host]
+C:\>

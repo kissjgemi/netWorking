@@ -1,0 +1,46 @@
+-------------------------------------------------------
+Router1
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface serial 0/1/1
+Router(config-if)#ip address 192.168.10.230 255.255.255.252
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/1, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 192.168.10.97 255.255.255.240
+Router(config-if)#no shutdown
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+------------------------------------------------------
+
+Router(config-if)#exit
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#no auto-summary 
+Router(config-router)#network 192.168.10.228
+Router(config-router)#network 192.168.10.96
+Router(config-router)#exit
+Router(config)#
+
+------------------------------------------------------
