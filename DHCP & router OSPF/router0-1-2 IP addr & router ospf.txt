@@ -1,0 +1,130 @@
+router0
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface serial 0/1/0
+Router(config-if)#ip add
+Router(config-if)#ip address 172.16.1.1 255.255.255.252
+Router(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to down
+Router(config-if)#exit
+Router(config)#router ospf 10
+Router(config-router)#network 172.16.1.0 0.0.0.3 area 0
+Router(config-router)#
+
+
+----------------------------
+router1
+
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface serial 0/1/0
+Router(config-if)#ip address 172.16.1.2 255.255.255.252
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/0, changed state to up
+
+Router(config)#interface serial 0/1/1
+Router(config-if)#ip address 172.16.2.2 255.255.255.252
+Router(config-if)#no shutdown 
+
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to down
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+Router(config-if)#exit
+Router(config)#router ospf 10
+Router(config-router)#network 172.16.1.0 0.0.0.3 area 0
+Router(config-router)#network 172.16.2.0 0.0.0.3 area 0
+Router(config-router)#network 192.168.1.0 0.0.0.255 area 0
+Router(config-router)#
+
+
+----------------------------
+router2
+
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable 
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface serial 0/1/1
+Router(config-if)#ip address 172.16.2.1 255.255.255.252
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to up
+
+Router(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/1, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 192.168.2.129 255.255.255.128
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.2.1 255.255.255.128
+Router(config-if)#no shutdown 
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+Router(config-if)#exit
+Router(config)#router ospf 10
+Router(config-router)#network 172.16.2.0 0.0.0.3 area 0
+Router(config-router)#network 192.168.2.0 0.0.0.127 area 0
+Router(config-router)#network 192.168.2.128 0.0.0.127 area 0
+Router(config-router)#
+
+

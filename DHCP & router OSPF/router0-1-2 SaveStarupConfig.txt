@@ -1,0 +1,29 @@
+router0
+
+Router>enable
+Router#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router#
+
+---------------------------------
+router1
+
+Router>enable
+Router#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router#
+
+---------------------------------
+router2
+
+Router>enable
+Router#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router#
+
