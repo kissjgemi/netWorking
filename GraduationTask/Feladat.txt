@@ -1,0 +1,65 @@
+
+    Egy műanyag alapanyagot gyártó cég hálózat tervezésében vesz részt. A cég két
+gyárteleppel rendelkezik, és egy irodája is van. Az irodában csak vezeték nélküli
+hozzáférést kell biztosítani. Feladata, hogy a megadott tervek alapján szimulációs
+programmal elkészítse a cég teszthálózatát.
+
+    A munkáját netfact16 néven mentse az Ön által használt szimulációs program
+alapértelmezett formátumában!
+ 
+ 1  A szimulációs programban válassza ki a feladat megoldásához szükséges eszközöket 
+    a következő információk alapján:
+    a. A forgalomirányítók rendelkezzenek minimum két Ethernet interfésszel,
+        amelyek legalább 100 Mb/s sebességűek, valamint legalább egy szinkron soros
+        interfésszel!
+    b. A kapcsolók legalább 8 portosak legyenek!
+    c. A vezeték nélküli hálózatot az irodában egy vezeték nélküli forgalomirányító
+        (SOHO forgalomirányító) biztosítsa!
+
+ 2  A kiválasztott eszközöket kösse össze a topológiai ábrának megfelelően!
+ 3  A hálózati eszközökön (kapcsolók, forgalomirányítók) a konfigurációban megjelenő
+    eszköznév a topológiai ábrának megfelelő név legyen (kivéve a vezeték nélküli
+    forgalomirányítón)!
+
+ 4  Állítsa be a forgalomirányítók és az SW11 kapcsoló, illetve az IRODA vezeték
+    nélküli forgalomirányító IP-címeit a táblázatnak és a topológiai ábrának
+    megfelelően!
+
+ 5  A GYAR1 forgalomirányítónál és az SW11 kapcsolónál biztosítani kell a 
+    távoli – telnet protokollon keresztüli – elérést. 
+    A távoli eléréshez használt jelszó Gyar1vty legyen!
+ 6  A GYAR1 forgalomirányítónál és az SW11 kapcsolónál a privilegizált módot védő
+    jelszó a Gyar1ena legyen!
+
+ 7  Állítsa be a PC11 számára az IP konfigurációt a táblázat alapján! 
+    A DNS szerver címe 4.4.8.8 legyen!
+
+ 8  A 2-es gyárban a GYAR2 forgalomirányító a 172.19.10.0 és a 172.19.20.0
+    hálózatokban is DHCP szerverfunkciókat lát el. A DHCP szervernél a következő
+    beállításokat kell elvégeznie mindkét hálózat esetén:
+    a.  Az utolsó 5 (eszköz által használható) címet ne ossza ki a kliensek számára!
+    b.  A DNS szerver címe: 4.4.8.8 legyen!
+ 9  Állítsa be a 2-es gyárban lévő számítógépeken, hogy IP-címüket automatikusan
+    kapják a DHCP szervertől!
+
+10  A cégnél dinamikus forgalomirányítás használata mellett döntött a tervezőcsapat.
+    Állítsa be a RIP forgalomirányító protokoll 2-es verzióját a GYAR1 és a GYAR2
+    forgalomirányítókon!
+
+11  Az IRODA vezeték nélküli forgalomirányító esetén a következő általános
+    beállításokat kell elvégeznie:
+    a.  A belső hálózatban a forgalomirányító DHCP szolgáltatást nyújt. 
+    Állítsa be úgy a DHCP szolgáltatást, hogy a 192.168.200.20-as IP-címtől a
+    192.168.200.50-es IP-címig osszon IP-címet a forgalomirányító! 
+    A DNS szerver címe 4.4.8.8 legyen!
+12  Az IRODA vezeték nélküli forgalomirányítón vezeték nélküli hozzáférést is
+    biztosítanak.
+    Állítsa be a vezeték nélküli hálózatot a következőképpen!
+    a.  Az SSID irodawifi legyen!
+    b.  A hitelesítés WPA2/PSK, a titkosítás AES segítségével történjen! 
+    A kulcs Nagytitok123 legyen!
+13  Csatlakoztassa a Laptop klienst a vezeték nélküli hálózathoz, és állítsa be, 
+    hogy IP-címét automatikusan kapja az IRODA forgalomirányítótól!
+
+14  Minden hálózati eszközön mentse el a konfigurációt, hogy azok újraindításuk 
+    után is megőrizzék a beállításokat!
