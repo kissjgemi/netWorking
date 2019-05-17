@@ -1,0 +1,34 @@
+Switch>enable
+S01#clock set 17:45:00 09 may 2019
+S01#conf t
+Switch(config)#ho S01
+S01(config)#enable secret cisco
+S01(config)#no ip domain-lookup 
+S01(config)#username admin privilege 15 secret cisco
+
+S01(config)#line console 0
+S01(config-line)#logging synchronous 
+S01(config-line)#password cisco
+S01(config-line)#login local // admin cisco
+// S01(config-line)#login
+S01(config-line)#exit
+
+S01(config)#line vty 0 15
+S01(config-line)#password cisco
+S01(config-line)#login local // admin cisco
+// S01(config-line)#login
+S01(config-line)#exit
+
+S01(config)#service password-encryption
+
+S01(config)#banner motd "Ne lepj meg"
+
+S01(config)#int vlan 1
+S01(config-if)#ip address 192.168.1.254 255.255.255.0
+S01(config-if)#no shutdown 
+S01(config-if)#exit
+
+S01(config)#ip default-gateway 192.168.1.1
+S01(config)#exit
+
+S01#copy running-config startup-config 
